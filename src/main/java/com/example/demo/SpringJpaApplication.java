@@ -8,17 +8,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringJpaApplication implements CommandLineRunner {
+public class SpringJpaApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringJpaApplication.class, args);
 	}
-	
 	@Override
-	public void run(String...args)throws Exception {
+	public void run(String...args) throws Exception{
 		if(Files.notExists(Paths.get("uploads"))) {
-			Files.createDirectory(Paths.get("uploas"));
+			Files.createDirectories(Paths.get("uploads"));
 		}
 	}
-	
 }
