@@ -18,22 +18,11 @@ import jakarta.persistence.TemporalType;
 @Entity //Para mapear con una BD
 @Table(name="clientes") //Para que la tabla se llame clientes
 public class Cliente implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	//private Long Id;
-	private Long id;
+	private Long Id;
 	
-	
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	@Column(name="nombre")
 	private String Nombre;
 	
@@ -52,10 +41,10 @@ public class Cliente implements Serializable{
 	
 	// Getters y Setters
 	public Long getId() {
-		return id;
+		return Id;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		Id = id;
 	}
 	public String getNombre() {
 		return Nombre;

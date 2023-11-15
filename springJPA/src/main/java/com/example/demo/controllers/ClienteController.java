@@ -9,9 +9,6 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,7 +22,6 @@ import com.example.demo.models.dao.IClienteDAO;
 import com.example.demo.models.dao.IClienteDAO_2;
 import com.example.demo.models.dao.IClienteService;
 import com.example.demo.models.entity.Cliente;
-import com.example.demo.paginator.PageRender;
 
 import jakarta.validation.Valid;
 
@@ -35,14 +31,9 @@ public class ClienteController {
 	private IClienteService clienteDAO; //inyeccion
 	
 	@GetMapping({"/listar","/"})
-	public String Listar(@RequestParam(name="page",defaultValue="0")int page, Model model) {
+	public String Listar(Model model) {
 		model.addAttribute("titulo","Listado de Clientes");
-		Pageable page_request = PageRequest.of(page, 4);
-		Page<Cliente> clientes = clienteDAO.FindAll(page_request);
-		PageRender<Cliente> page_render = new PageRender<>("/listar",clientes);
-		model.addAttribute("page",page_render);
-		model.addAttribute("clientes", clientes);
-		//model.addAttribute("clientes", clienteDAO.findAll());
+		model.addAttribute("clientes", clienteDAO.findAll());
 		return "listar";
 	}
 	@GetMapping("/form")

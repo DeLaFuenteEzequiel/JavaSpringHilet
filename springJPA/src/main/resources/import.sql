@@ -1,0 +1,5 @@
+INSERT INTO clientes (nombre,apellido,email,create_at,foto) VALUES ('Fabian','Veschi','fveschi@gmail.com','2023-09-27','4f3d4f90-d94b-4429-974f-7fecdf47fb79-fabiVeschi.jpg');
+INSERT INTO clientes (nombre,apellido,email,create_at,foto) VALUES ('Fernando','Cosentino','fcosentino@gmail.com','2023-09-28','742b5012-ad5f-459a-a078-7f46d8399bac-ferCos.jpg');
+INSERT INTO clientes (nombre,apellido,email,create_at,foto) VALUES ('Patricio','Castro','pcastro@gmail.com','2023-09-29','369e3f85-5770-4c4d-bbf6-862444aa7af5-patoCast.jpg');
+INSERT INTO clientes (nombre,apellido,email,create_at,foto) VALUES ('Francisco','Garibotto','fgaribotto@gmail.com','2023-09-30','bdd10a79-ab84-4ce9-9ea0-061dd6f6d0bc-franGari.jpg');
+INSERT INTO clientes (nombre,apellido,email,create_at,foto) VALUES ('Franco','Spatocco','fspatocco@gmail.com','2023-10-01','6ee88191-af22-4f01-8823-ce314f584ae7-franSpa.jpg');
